@@ -1,0 +1,29 @@
+Importing File in Python
+-------------------------------
+1. Flat Files:
+2. Numpy array : standard for storing numerical data
+    - np.genfromtxt() to import data containing mixed datatypes.
+    Example: data = np.genfromtxt('titanic.csv', delimiter=',', names=True, dtype=None)
+
+    - np.loadtxt() import data of same datatype
+    Example :data_float = np.loadtxt(file, delimiter='\t', dtype=float, skiprows=1)
+
+    - np.recfromcsv() import data of different dtype
+    d = np.recfromcsv(file, delimiter=',',names=True, dtype=None)
+
+3. Pandas
+    - Reading a csv file (no header, reading only 5 rows)
+    data = pd.read_csv(file, header=None, nrows=5)
+
+    - Converting a dataframe to numpy array
+    data_array = np.array(data)
+
+4. Reading from Pickle files
+    - Used for saving data types such as list and dict
+    # Open pickle file and load data: d
+    with open('data.pkl', 'rb') as file:
+        d = pickle.load(file)
+
+4. Reading Excel files
+
+5. Reading from SQL databases
