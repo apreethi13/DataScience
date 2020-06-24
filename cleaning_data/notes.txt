@@ -1,0 +1,69 @@
+Cleaning data
+-----------------
+
+1. Differet Data types
+    - Text data : str
+    - Integers  : int
+    - Decimals  : float
+    - Binary    : Bool
+    - Dates     : Datetime
+    - Categories: category
+
+2. Out of Range Data
+    - Drop Data(only if it is small propotion)
+    - Setting custom min or max
+    - Custom value
+
+3. Duplicate values
+    - Reason for duplicates
+        1) Data Entry/ Human error
+        2) Bugs or design errors
+        3) Join or merge errors
+
+    - Finding Duplicates
+        - .duplicated() method
+            - subset - col names
+            - keep - 'first','last','keep'(False)
+
+    - Dropping duplicates
+        - drop_duplicates()
+
+    - Merging Duplicates
+        - .groupby() and agg()
+
+4. Categorical Data Issues
+    - Reasong for errors: 1) Data Entry 2) Parsing Error
+    - Handle
+        - 1) drop data
+        - 2) Remap categories
+        - 3) Infering Categories
+    - Handle Value inconsistency
+        - Make the data uniform (upper or lower or leading or trailing spaces)
+
+    - Collapsing Data in Categories
+        - cut -  pandas function with bins arguement( takes cut off points for each category)
+        - qcut - pandas function distribute the categories based on the q arguement
+        - reducing categories to fewer ones using replace function
+
+    - Cleaning Text data
+
+5. Data Consistency and Uniformity
+    - Handling Ambigous dates
+        - Conver to NA
+        - Understand data source
+    - Cross validate - Incosistence
+        - Dropping data
+        - set to missing
+        - apply rules
+    - Library missingno - visualize missing value in a csv
+
+6. Comparing Strings
+     - Fuzzywuzzy simple package for string comparison
+        - o/p - Score(0 -100 (80 is best fit)
+
+     - Generating Pairs - Record Linkage
+        - 2 df -> generate pairs -> compare pairs -> score pairs - Link data
+
+
+
+

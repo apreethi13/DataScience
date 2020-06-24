@@ -2,13 +2,16 @@
 import pandas as pd
 
 # Assign spreadsheet filename: file
-file = 'battledeath.xlsx'
+file = '../datasets/battledeath.xlsx'
 
 # Load spreadsheet: xls
 xls = pd.ExcelFile(file)
 
 # Print sheet names
 print(xls.sheet_names)
+
+# Print the head of the first sheet (using its name, NOT its index)
+print(xls.parse('2002').head())
 
 # Parse the first sheet and rename the columns: df1
 df1 = xls.parse(0, skiprows=[1], names=['Country','AAM due to War (2002)'])

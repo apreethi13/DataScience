@@ -25,5 +25,16 @@ Importing File in Python
         d = pickle.load(file)
 
 4. Reading Excel files
+    - reading all sheetnames -
+    xls = pd.read_excel(url, sheet_name=None)
 
 5. Reading from SQL databases
+
+6. Reading from Web
+    - from urllib.request import urlopen,Request
+    - reading HTML from requests using request from
+
+7. Reading JSON:
+    import json
+    with open("a_movie.json") as json_file:
+        json_data = json.load(json_file)
